@@ -35,7 +35,7 @@ if [ -d "build" ]; then
 fi
 
 # Install the package in editable mode so that it installs dependencies. These are needed for sphinx docs.
-python3 -m pip3 install --upgrade pip
+pip3 install --upgrade pip
 pip3 install -e .
 
 # Build the .whl file and place it in a build/ folder.

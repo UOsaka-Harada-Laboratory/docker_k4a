@@ -21,4 +21,4 @@ services:
         privileged: true
         tty: true
         network_mode: host
-        command: bash -c "source /opt/ros/melodic/setup.bash && cd /catkin_ws && catkin build && cp /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/* . && chmod +x ./* && bash"
+        command: bash -c "source /opt/ros/melodic/setup.bash && cd /catkin_ws && catkin build && cp /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/* /catkin_ws/src/k4a/scripts/ && chmod +x /catkin_ws/src/k4a/scripts/* && bash"

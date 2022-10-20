@@ -53,7 +53,7 @@ WORKDIR /Azure-Kinect-Sensor-SDK/
 RUN mkdir build && cd build && cmake .. -GNinja && ninja && ninja install
 RUN cp /usr/lib/x86_64-linux-gnu/libk4a1.4/libdepthengine.so.2.0 /Azure-Kinect-Sensor-SDK/build/bin/
 RUN echo "/Azure-Kinect-Sensor-SDK/build/bin" >> /etc/ld.so.conf.d/libc.conf
-RUN echo "export LD_LIBRARY_PATH=/Azure-Kinect-Sensor-SDK/build/bin/:$LD_LIBRARY_PATH" >> ~/.bashrc
+RUN echo "export LD_LIBRARY_PATH=/Azure-Kinect-Sensor-SDK/build/bin/:/opt/ros/melodic/lib/:$LD_LIBRARY_PATH" >> ~/.bashrc
 
 WORKDIR /Azure-Kinect-Sensor-SDK/src/python/k4a/
 RUN cp /usr/lib/x86_64-linux-gnu/libk4a.so ./src/k4a/_libs/ 
@@ -64,7 +64,7 @@ ADD build_wheel_rev.csh .
 RUN bash -c 'source ./build_wheel_rev.csh'
 
 WORKDIR /catkin_ws/src/k4a/scripts/
-RUN pip3 install -U pip && pip3 install opencv-contrib-python open3d
+RUN pip3 install --upgrade pip && pip3 install opencv-contrib-python open3d
 
 # Generates bash commands
 RUN echo "k4aviewer" >> ~/.bash_history
