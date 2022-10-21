@@ -62,11 +62,11 @@ RUN cp /usr/lib/x86_64-linux-gnu/libk4a.so.1.4.1 ./src/k4a/_libs/
 RUN cp /usr/lib/x86_64-linux-gnu/libk4a1.4/libdepthengine.so.2.0 ./src/k4a/_libs/
 ADD build_wheel_rev.csh .
 RUN bash -c 'source ./build_wheel_rev.csh'
-
-WORKDIR /catkin_ws/src/k4a/scripts/
+RUN chmod +x ./examples/* 
 RUN pip3 install --upgrade pip && pip3 install opencv-contrib-python open3d
 
 # Generates bash commands
+WORKDIR /
 RUN echo "k4aviewer" >> ~/.bash_history
 RUN echo "roslaunch k4a test_k4a.launch" >> ~/.bash_history
 RUN echo "roslaunch k4a k4a_pcd_rviz.launch" >> ~/.bash_history
@@ -74,9 +74,9 @@ RUN echo "rosrun pcl_ros pointcloud_to_pcd input:=/camera/depth/color/points _pr
 RUN echo "rosrun pcl_ros pointcloud_to_pcd input:=/points2 _prefix:=/catkin_ws/src/db-manip-stack/object_recognition/pcd/vel_" >> ~/.bash_history
 RUN echo "cd /catkin_ws/src/k4a/scripts" >> ~/.bash_history
 RUN echo "python3 disp_rgbd.py" >> ~/.bash_history
-RUN echo "python3 simple_viewer.py" >> ~/.bash_history
-RUN echo "python3 point_cloud_capture.py" >> ~/.bash_history
-RUN echo "python3 image_transformation.py" >> ~/.bash_history
 RUN echo "python3 save_pcd.py" >> ~/.bash_history
 RUN echo "python3 read_pcd.py" >> ~/.bash_history
-RUN echo "python3 the_basics.py" >> ~/.bash_history
+RUN echo "python3 /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/simple_viewer.py" >> ~/.bash_history
+RUN echo "python3 /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/point_cloud_capture.py" >> ~/.bash_history
+RUN echo "python3 /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/image_transformations.py" >> ~/.bash_history
+RUN echo "python3 /Azure-Kinect-Sensor-SDK/src/python/k4a/examples/the_basics.py" >> ~/.bash_history

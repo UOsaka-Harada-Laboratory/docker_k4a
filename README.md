@@ -16,12 +16,12 @@ Docker of a development environment for Microsoft Azure Kinect (k4a)
 
 ## Installation
 
-    $ git clone https://github.com/takuya-ki/docker_k4a.git
+    $ git clone https://github.com/takuya-ki/docker_k4a.git --recursive --depth 1
 
 ## Usage
 #### Host machine
     $ cd docker_k4a
-    $ docker-compose build --no-cache
+    $ COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --no-cache --parallel
     $ docker-compose up
     $ xhost +
     $ docker exec -it k4a_container bash
