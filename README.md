@@ -32,3 +32,7 @@ Docker of a development environment for Microsoft Azure Kinect (k4a)
 ## Author / Contibutor
 
 [Takuya Kiyokawa](https://takuya-ki.github.io/)
+
+## License
+
+This software is released under the MIT License, see [LICENSE](./LICENSE).
