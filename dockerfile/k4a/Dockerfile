@@ -1,4 +1,4 @@
-FROM nvidia/opengl:1.2-glvnd-runtime-ubuntu18.04
+FROM nvidia/opengl:1.2-glvnd-devel-ubuntu18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends curl lsb-release wget gnupg
 RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
