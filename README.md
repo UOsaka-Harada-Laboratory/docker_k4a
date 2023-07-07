@@ -41,7 +41,7 @@ roslaunch k4a k4a_pcd_rviz.launch
 ```
 For other scripts, please see the bash history in the container.
 
-## Author / Contibutor
+## Author / Contributor
 
 [Takuya Kiyokawa](https://takuya-ki.github.io/)
 
