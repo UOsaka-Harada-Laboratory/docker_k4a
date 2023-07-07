@@ -1,6 +1,9 @@
 # docker_k4a
 
-Docker of a development environment for Microsoft Azure Kinect (k4a)
+[![support level: community](https://img.shields.io/badge/support%20level-community-lightgray.svg)](http://rosindustrial.org/news/2016/10/7/better-supporting-a-growing-ros-industrial-software-platform)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Docker of a development environment for Microsoft Azure Kinect (k4a).
 
 ## Requirements (tested)
 
@@ -15,19 +18,28 @@ Docker of a development environment for Microsoft Azure Kinect (k4a)
   - [Azure_Kinect_ROS_Driver](https://github.com/microsoft/Azure_Kinect_ROS_Driver)  
 
 ## Installation
-
-    $ git clone https://github.com/takuya-ki/docker_k4a.git --recursive --depth 1
+```bash
+git clone https://github.com/takuya-ki/docker_k4a.git --recursive --depth 1
+cd docker_k4a
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --no-cache --parallel
+docker-compose up
+```
 
 ## Usage
 #### Host machine
-    $ cd docker_k4a
-    $ COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --no-cache --parallel
-    $ docker-compose up
-    $ xhost +
-    $ docker exec -it k4a_container bash
+```bash
+xhost +
+docker exec -it k4a_container bash
+```
 
 #### Docker container
-    Please see the bash history.
+```bash
+roslaunch k4a test_k4a.launch
+```
+```bash
+roslaunch k4a k4a_pcd_rviz.launch
+```
+For other scripts, please see the bash history in the container.
 
 ## Author / Contibutor
 
