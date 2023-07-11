@@ -8,8 +8,8 @@ Docker of a development environment for Microsoft Azure Kinect (k4a).
 
 ## Requirements (tested)
 
-- Ubuntu 20.04 (arch=amd64)
-  - RTX3080
+- [Ubuntu 20.04 PC](https://ubuntu.com/certified/laptops?q=&limit=20&vendor=Dell&vendor=Lenovo&vendor=HP&release=20.04+LTS)
+  - NVIDIA GeForce RTX3080
     - NVIDIA Driver 470.141.03
   - docker 20.10.12
   - docker-compose 1.29.2
