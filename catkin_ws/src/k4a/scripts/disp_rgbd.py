@@ -6,22 +6,22 @@ import numpy as np
 
 
 if __name__ == '__main__':
-    # Open Device
+    # open Device
     device = k4a.Device.open()
 
-    # Start Cameras
+    # start Cameras
     device_config = k4a.DEVICE_CONFIG_BGRA32_1080P_NFOV_UNBINNED_FPS15
     device.start_cameras(device_config)
 
-    # Get Calibration
+    # get Calibration
     calibration = device.get_calibration(
         depth_mode=device_config.depth_mode,
         color_resolution=device_config.color_resolution)
 
-    # Create Transformation
+    # create Transformation
     transformation = k4a.Transformation(calibration)
 
-    # Display Images
+    # display Images
     while True:
         # Get a new capture.
         capture = device.get_capture(-1)

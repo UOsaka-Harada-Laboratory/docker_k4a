@@ -33,13 +33,13 @@ xhost + && docker exec -it k4a_container bash
 ```
 
 #### Docker container
-```bash
-roslaunch k4a test_k4a.launch
-```
-```bash
-roslaunch k4a k4a_pcd_rviz.launch
-```
-For other scripts, please see the bash history in the container.
+- Please see the bash history in the container for more examples.
+    ```bash
+    roslaunch k4a test_k4a.launch
+    ```
+    ```bash
+    roslaunch k4a k4a_pcd_rviz.launch
+    ```
 
 ## Author / Contributor
 
