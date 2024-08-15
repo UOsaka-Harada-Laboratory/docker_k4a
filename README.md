@@ -6,14 +6,14 @@
 
 Docker of a development environment for Microsoft Azure Kinect (k4a).
 
-## Requirements (tested)
+## Dependency (tested as a host machine)
 
-- [Ubuntu 20.04 PC](https://ubuntu.com/certified/laptops?q=&limit=20&vendor=Dell&vendor=Lenovo&vendor=HP&release=20.04+LTS) (22.04 is not supported)
-  - NVIDIA GeForce RTX3080
-    - NVIDIA Driver 470.141.03
-  - docker 20.10.12
-  - docker-compose 1.29.2
-  - nvidia-docker2 2.8.0-1
+- [Ubuntu 22.04 PC](https://ubuntu.com/certified/laptops?q=&limit=20&vendor=Dell&vendor=Lenovo&vendor=HP&release=22.04+LTS)
+  - NVIDIA GeForce RTX 3070
+  - NVIDIA Driver 470.256.02
+  - Docker 26.1.1
+  - Docker Compose 2.27.0
+  - NVIDIA Docker 2.13.0
 - Microsoft Azure Kinect
   - [Azure-Kinect-Sensor-SDK](https://github.com/microsoft/Azure-Kinect-Sensor-SDK)  
   - [Azure_Kinect_ROS_Driver](https://github.com/microsoft/Azure_Kinect_ROS_Driver)  

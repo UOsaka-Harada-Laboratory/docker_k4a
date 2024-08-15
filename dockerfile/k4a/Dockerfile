@@ -26,7 +26,7 @@ RUN apt update -y && apt install -y --no-install-recommends \
     ninja-build \
     python3-pip \
     python-pip \
-    python3-tk
+    python3-tk \
     python3.8 \
     net-tools \
     pcl-tools \
@@ -72,7 +72,7 @@ RUN cp /usr/lib/x86_64-linux-gnu/libk4a1.4/libdepthengine.so.2.0 ./src/k4a/_libs
 ADD build_wheel_rev.csh .
 RUN /bin/bash -c 'source ./build_wheel_rev.csh'
 RUN chmod +x examples/*
-RUN pip3 install --upgrade pip && pip3 install opencv-contrib-python open3d==0.16.0
+RUN pip3 install --upgrade pip && pip3 install opencv-contrib-python open3d
 
 # Generates bash commands
 WORKDIR /
