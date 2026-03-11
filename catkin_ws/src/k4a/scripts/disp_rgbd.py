@@ -13,14 +13,6 @@ if __name__ == '__main__':
     device_config = k4a.DEVICE_CONFIG_BGRA32_1080P_NFOV_UNBINNED_FPS15
     device.start_cameras(device_config)
 
-    # get Calibration
-    calibration = device.get_calibration(
-        depth_mode=device_config.depth_mode,
-        color_resolution=device_config.color_resolution)
-
-    # create Transformation
-    transformation = k4a.Transformation(calibration)
-
     # display Images
     while True:
         # Get a new capture.
@@ -42,5 +34,5 @@ if __name__ == '__main__':
         cv2.imshow("depth image", depth_image)
         cv2.waitKey(1)
 
-    # Get a new capture.
-    capture = device.get_capture(-1)
+    # stop Cameras
+    device.stop_cameras()

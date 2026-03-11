@@ -79,8 +79,7 @@ WORKDIR /
 RUN echo "k4aviewer" >> ~/.bash_history
 RUN echo "roslaunch k4a test_k4a.launch" >> ~/.bash_history
 RUN echo "roslaunch k4a k4a_pcd_rviz.launch" >> ~/.bash_history
-RUN echo "rosrun pcl_ros pointcloud_to_pcd input:=/camera/depth/color/points _prefix:=/catkin_ws/src/realsense-ros/pcd/vel_" >> ~/.bash_history
-RUN echo "rosrun pcl_ros pointcloud_to_pcd input:=/points2 _prefix:=/catkin_ws/src/db-manip-stack/object_recognition/pcd/vel_" >> ~/.bash_history
+RUN echo "rosrun pcl_ros pointcloud_to_pcd input:=/points2 _prefix:=/catkin_ws/src/k4a/pcd/vel_" >> ~/.bash_history
 RUN echo "cd /catkin_ws/src/k4a/scripts" >> ~/.bash_history
 RUN echo "python3 disp_rgbd.py" >> ~/.bash_history
 RUN echo "python3 save_pcd.py" >> ~/.bash_history

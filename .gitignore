@@ -1,1 +1,6 @@
 /catkin_ws/src/Azure_Kinect_ROS_Driver
+__pycache__/
+*.pyc
+*.pyo
+*.pcd
+catkin_ws/src/k4a/scripts/data.txt

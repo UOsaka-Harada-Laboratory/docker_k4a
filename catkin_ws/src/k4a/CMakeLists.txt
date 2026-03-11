@@ -11,7 +11,3 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-)
-
